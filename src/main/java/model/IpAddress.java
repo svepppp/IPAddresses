@@ -1,3 +1,5 @@
+package model;
+
 public class IpAddress {
     private String value;
     private int firstNumber;
@@ -24,22 +26,5 @@ public class IpAddress {
 
     public void setValue(String value) {
         this.value = value;
-    }
-
-    public void setFirstNumber(int firstNumber) {
-        this.firstNumber = firstNumber;
-    }
-
-    public void setSecondNumber(int secondNumber) {
-        this.secondNumber = secondNumber;
-    }
-
-    @Override
-    public String toString() {
-        return "IpAddress{" +
-                "value='" + value + '\'' +
-                ", firstNumber=" + firstNumber +
-                ", secondNumber=" + secondNumber +
-                '}';
     }
 }
