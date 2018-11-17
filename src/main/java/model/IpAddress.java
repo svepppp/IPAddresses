@@ -31,7 +31,7 @@ public class IpAddress {
          indexPoint=i;
         stringNumber = value.substring(indexPoint+1);
         number = Integer.parseInt(stringNumber);
-       return number;
+        return number;
     }
 
     public void setNumber(int number) {
