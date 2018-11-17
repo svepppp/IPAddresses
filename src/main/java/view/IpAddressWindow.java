@@ -13,6 +13,23 @@ public class IpAddressWindow extends JFrame {
     private String value1;
     private String value2;
     private AllIpAddressesWindow allIpAddressesWindow;
+
+    public String getValue1() {
+        return value1;
+    }
+
+    public String getValue2() {
+        return value2;
+    }
+
+    public AllIpAddressesWindow getAllIpAddressesWindow() {
+        return allIpAddressesWindow;
+    }
+
+    public void setAllIpAddressesWindow(AllIpAddressesWindow allIpAddressesWindow) {
+        this.allIpAddressesWindow = allIpAddressesWindow;
+    }
+
     public IpAddressWindow() throws HeadlessException {
         setVisible(false);
         jPanel = new JPanel();
@@ -22,9 +39,9 @@ public class IpAddressWindow extends JFrame {
         setTitle("IP адреса");
         setSize(200, 150);
         setLocationRelativeTo(null);
-        //setLayout(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jPanel.add(jLabel);
+
         jPanel.add(jTextField1);
         jPanel.add(jTextField2);
         add(jPanel);
@@ -37,13 +54,13 @@ public class IpAddressWindow extends JFrame {
                 jTextField2.requestFocus();
             }
         });
+
         jTextField2.addActionListener(new ActionListener() {  //   по  Enter
             @Override
             public void actionPerformed(ActionEvent e) {
                 value2 = jTextField2.getText();
-               allIpAddressesWindow=new AllIpAddressesWindow();
-                 dispose();
-
+              allIpAddressesWindow=new AllIpAddressesWindow();
+                                dispose();
                            }
         });
     }

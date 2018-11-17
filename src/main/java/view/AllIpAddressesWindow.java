@@ -10,6 +10,14 @@ public class AllIpAddressesWindow extends JFrame {
     private JTextArea jTextArea;
     private  JButton jButton;
 
+    public JTextArea getjTextArea() {
+        return jTextArea;
+    }
+
+    public void setjTextArea(JTextArea jTextArea) {
+        this.jTextArea = jTextArea;
+    }
+
     public AllIpAddressesWindow() throws HeadlessException {
         setVisible(false);
         setTitle("Все IP адреса");
