@@ -11,6 +11,11 @@ public class Diapason {
     public Diapason() {
     }
 
+    public Diapason(String value1, String value2) {
+         ipAddress1=new IpAddress(value1);
+         ipAddress2 =new IpAddress(value2);
+    }
+
     public IpAddress getIpAddress1() {
         return ipAddress1;
     }
@@ -45,7 +50,7 @@ public class Diapason {
 
     private List<String> getAllNumbers(IpAddress ipAddress1, IpAddress ipAddress2) {
         List<String> allNumbers = new ArrayList<>();
-        int number = ipAddress1.getNumber(ipAddress1.getValue());
+        int number = ipAddress1.getNumber();
         int difference = getDifference(ipAddress1, ipAddress2);
 
         for (int i = 0; i < difference; i++) {
@@ -57,8 +62,8 @@ public class Diapason {
     }
 
     private int getDifference(IpAddress ipAddress1, IpAddress ipAddress2) {
-        int number1 = ipAddress1.getNumber(ipAddress1.getValue());
-        int number2 = ipAddress2.getNumber(ipAddress2.getValue());
+        int number1 = ipAddress1.getNumber();
+        int number2 = ipAddress2.getNumber();
         int difference=number2 - number1 - 1;
         return difference;
     }

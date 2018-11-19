@@ -20,7 +20,7 @@ public class IpAddress {
         this.value = value;
     }
 
-    public int getNumber(String value) {
+    public int getNumber() {
         String stringNumber;
         int i = value.length();
         char symbol = ' ';
