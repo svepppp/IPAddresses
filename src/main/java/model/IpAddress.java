@@ -3,7 +3,7 @@ package model;
 public class IpAddress {
     private String value;
     private int number;
-     private int indexPoint;
+    private int indexPoint;
 
     public IpAddress() {
     }
@@ -26,10 +26,10 @@ public class IpAddress {
         char symbol = ' ';
         do {
             i--;
-            symbol = value.charAt(i );
+            symbol = value.charAt(i);
         } while (symbol != '.');
-         indexPoint=i;
-        stringNumber = value.substring(indexPoint+1);
+        indexPoint = i;
+        stringNumber = value.substring(indexPoint + 1);
         number = Integer.parseInt(stringNumber);
         return number;
     }

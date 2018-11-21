@@ -12,7 +12,7 @@ public class IpAddressWindow extends JFrame {
     private JTextField jTextField2;
     private String value1;
     private String value2;
-    private AllIpAddressesWindow allIpAddressesWindow;
+    // private AllIpAddressesWindow allIpAddressesWindow;
 
     public String getValue1() {
         return value1;
@@ -21,14 +21,14 @@ public class IpAddressWindow extends JFrame {
     public String getValue2() {
         return value2;
     }
-
+/*
     public AllIpAddressesWindow getAllIpAddressesWindow() {
         return allIpAddressesWindow;
     }
 
     public void setAllIpAddressesWindow(AllIpAddressesWindow allIpAddressesWindow) {
         this.allIpAddressesWindow = allIpAddressesWindow;
-    }
+    }*/
 
     public IpAddressWindow() throws HeadlessException {
         setVisible(false);
@@ -59,9 +59,9 @@ public class IpAddressWindow extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 value2 = jTextField2.getText();
-              allIpAddressesWindow=new AllIpAddressesWindow();
-                                dispose();
-                           }
+                // allIpAddressesWindow = new AllIpAddressesWindow();
+                // dispose();
+            }
         });
     }
 }
