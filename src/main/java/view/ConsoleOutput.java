@@ -14,6 +14,15 @@ public class ConsoleOutput implements Output {
         this.diapason = diapason;
     }
 
+    public Diapason getDiapason() {
+        return diapason;
+    }
+
+    @Override
+    public void setDiapason(Diapason diapason) {
+        this.diapason = diapason;
+    }
+
     @Override
     public void showAllIpAddresses() {
         List<String> allIpAddresses = diapason.getAllIpAddresses();
