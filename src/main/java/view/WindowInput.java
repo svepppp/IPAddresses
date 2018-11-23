@@ -10,7 +10,7 @@ public class WindowInput implements Input {
     @Override
     public String[] getValues() {
         String[] values = new String[2];
-        pause(20000);
+        pause(40000);
         values[0] = ipAddressWindow.getValue1();
         values[1] = ipAddressWindow.getValue2();
         return values;
