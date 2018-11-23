@@ -37,10 +37,9 @@ public class DiapasonTest {
     public void testGetAllIpAddresses() {
         Diapason diapason = new Diapason("192.168.0.5", "192.168.0.14");
 
-       // IpAddress ipAddress1 = diapason.getIpAddress1();
-      //  IpAddress ipAddress2 = diapason.getIpAddress2();
         List<String> allIpAddresses = diapason.getAllIpAddresses();
 
+        assertEquals(8,allIpAddresses.size());
         assertEquals("192.168.0.6", allIpAddresses.get(0));
         assertEquals("192.168.0.13", allIpAddresses.get(7));
     }

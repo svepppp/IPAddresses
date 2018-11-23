@@ -1,12 +1,17 @@
 package view;
 
+import java.io.InputStream;
 import java.util.Scanner;
 
 public class ConsoleInput implements Input {
     private Scanner scanner;
 
     public ConsoleInput() {
-        scanner = new Scanner(System.in);
+        this(System.in);
+    }
+
+    public ConsoleInput(InputStream inputStream) {
+        scanner = new Scanner(inputStream);
     }
 
     @Override
