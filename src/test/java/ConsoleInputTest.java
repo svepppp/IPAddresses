@@ -15,7 +15,9 @@ public class ConsoleInputTest {
         String mockInput = "192.168.0.5\n192.168.0.15";
         InputStream mockInputStrim = new ByteArrayInputStream(mockInput.getBytes(StandardCharsets.UTF_8.name()));
         ConsoleInput consoleInput = new ConsoleInput(mockInputStrim);
-        String[] values = consoleInput.getValues();
+        String[] values= new String[2];
+        values[0] = consoleInput.getScanner().nextLine();
+        values[1] = consoleInput.getScanner().nextLine();
         assertEquals("192.168.0.5", values[0]);
         assertEquals("192.168.0.15", values[1]);
     }
